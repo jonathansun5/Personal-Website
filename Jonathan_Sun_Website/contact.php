@@ -25,7 +25,7 @@ if (!$errors) {
 	$from = $name . ' <' . $email . '>';
 	
 	//subject and the html message
-	$subject = 'Message via Aries from ' . $name;	
+	$subject = 'Message via Personal Website from ' . $name;	
 	$message = 'Name: ' . $name . '<br/><br/>
 		       Email: ' . $email . '<br/><br/>		
 		       Message: ' . nl2br($comment) . '<br/>';
