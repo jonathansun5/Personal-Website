@@ -114,15 +114,19 @@ a:hover,a:focus {
 }
 .intro {
 	display:table;
-	width:100%;
+	width:auto;
 	height:auto;
+	margin: 0 auto;
 	padding:100px 0 100px 0;
 	text-align:center;
 	color:#fff;
-	background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('http://unsplash.it/1600/1400?random=9');
+	background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('images/Jonathan_Sun_JS_Logo.jpeg');
+/*	background-size: auto auto;
+*/	background-repeat:no-repeat;
+	background-position: center center;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
-	background-size:cover;
+	background-size:contain;
 	-o-background-size:cover;
 }
 .intro .intro-body {
@@ -170,6 +174,22 @@ a:hover,a:focus {
 	-moz-transition:background .3s ease-in-out;
 	transition:background .3s ease-in-out;
 }
+.btn-circle.btn-black {
+	width:50px;
+	height:50px;
+	margin-top:15px;
+	line-height:40px;
+	text-align:center;
+	border:2px solid #000;
+	border-radius:100%!important;
+	font-size:20px;
+	color:#000;
+	background:0 0;
+	-webkit-transition:background .3s ease-in-out;
+	-moz-transition:background .3s ease-in-out;
+	transition:background .3s ease-in-out;
+}
+
 .btn-circle:hover,.btn-circle:focus {
 	outline:0;
 	color:#fff;
