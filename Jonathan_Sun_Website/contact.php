@@ -37,8 +37,8 @@ if (!$errors) {
    $result2 = sendmail($to2, $subject, $message, $from);
    //if POST was used, display the message straight away
    if ($_POST) {
-      if ($result1 && $result2) echo 'Thank you! We have received your message.';
-      // else echo 'Sorry, unexpected error. Please try again later';
+      if ($result1 || $result2) echo 'Thank you! We have received your message.';
+      else echo 'Sorry, unexpected error. Please try again later';
       
    //else if GET was used, return the boolean value so that 
    //ajax script can react accordingly
