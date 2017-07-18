@@ -44,7 +44,8 @@ if (!$errors) {
    //ajax script can react accordingly
    //1 means success, 0 means failed
    } else {
-      echo $result;  
+      echo $result1;
+      echo $result2;  
    }
 
 //if the errors array has values
