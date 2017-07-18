@@ -21,7 +21,8 @@ if (!$comment) $errors[count($errors)] = 'Please enter your message.';
 if (!$errors) {
 
    //recipient - replace your email here
-   $to = 'jonathansun5@gmail.com';  
+   $to1 = 'jonathansun5@gmail.com';
+   $to2 = 'jonathansun5@berkeley.edu';
    //sender - from the form
    $from = $name . ' <' . $email . '>';
    
@@ -32,11 +33,11 @@ if (!$errors) {
              Message: ' . nl2br($comment) . '<br/>';
 
    //send the mail
-   $result = sendmail($to, $subject, $message, $from);
-   
+   $result1 = sendmail($to1, $subject, $message, $from);
+   $result2 = sendmail($to2, $subject, $message, $from);
    //if POST was used, display the message straight away
    if ($_POST) {
-      if ($result) echo 'Thank you! We have received your message.';
+      if ($result1 && $result2) echo 'Thank you! We have received your message.';
       else echo 'Sorry, unexpected error. Please try again later';
       
    //else if GET was used, return the boolean value so that 
