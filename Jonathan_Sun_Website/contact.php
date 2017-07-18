@@ -38,16 +38,15 @@ if (!$errors) {
    //if POST was used, display the message straight away
    if ($_POST) {
       if ($result1 && $result2) echo 'Thank you! We have received your message.';
-      else echo 'Sorry, unexpected error. Please try again later';
+      // else echo 'Sorry, unexpected error. Please try again later';
       
    //else if GET was used, return the boolean value so that 
    //ajax script can react accordingly
    //1 means success, 0 means failed
-   } 
-   // else {
-   //    echo $result1;
-   //    echo $result2;  
-   // }
+   } else {
+      echo $result1;
+      echo $result2;  
+   }
 
 //if the errors array has values
 } else {
