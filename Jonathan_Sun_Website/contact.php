@@ -22,7 +22,7 @@ if (!$errors) {
 
    //recipient - replace your email here
    $to1 = 'jonathansun5@gmail.com';
-   $to2 = 'jonathansun5@berkeley.edu';
+   // $to2 = 'jonathansun5@berkeley.edu';
    //sender - from the form
    $from = $name . ' <' . $email . '>';
    
@@ -34,10 +34,10 @@ if (!$errors) {
 
    //send the mail
    $result1 = sendmail($to1, $subject, $message, $from);
-   $result2 = sendmail($to2, $subject, $message, $from);
+   // $result2 = sendmail($to2, $subject, $message, $from);
    //if POST was used, display the message straight away
    if ($_POST) {
-      if ($result1 || $result2) echo 'Thank you! We have received your message.';
+      if ($result1) echo 'Thank you! We have received your message.';
       else echo 'Sorry, unexpected error. Please try again later';
       
    //else if GET was used, return the boolean value so that 
@@ -45,7 +45,7 @@ if (!$errors) {
    //1 means success, 0 means failed
    } else {
       echo $result1;
-      echo $result2;  
+      // echo $result2;  
    }
 
 //if the errors array has values
