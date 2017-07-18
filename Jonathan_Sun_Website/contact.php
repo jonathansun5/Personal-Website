@@ -43,10 +43,11 @@ if (!$errors) {
    //else if GET was used, return the boolean value so that 
    //ajax script can react accordingly
    //1 means success, 0 means failed
-   } else {
-      echo $result1;
-      echo $result2;  
-   }
+   } 
+   // else {
+   //    echo $result1;
+   //    echo $result2;  
+   // }
 
 //if the errors array has values
 } else {
