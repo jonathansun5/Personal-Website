@@ -5,6 +5,7 @@
 //POST - in case user does not support javascript, we'll use POST instead
 $name = ($_GET['name']) ? $_GET['name'] : $_POST['name'];
 $email = ($_GET['email']) ?$_GET['email'] : $_POST['email'];
+$subject = ($_GET['subject']) ?$_GET['subject'] : $_POST['subject'];
 $comment = ($_GET['comment']) ?$_GET['comment'] : $_POST['comment'];
 $errors = array();
 
@@ -14,8 +15,9 @@ if ($_POST) $post=1;
 
 //Simple server side validation for POST data, of course, you should validate the email
 if (!$name) $errors[count($errors)] = 'Please enter your name.';
-if (!$email) $errors[count($errors)] = 'Please enter your email.'; 
-if (!$comment) $errors[count($errors)] = 'Please enter your message.'; 
+if (!$email) $errors[count($errors)] = 'Please enter your email.';
+if (!$subject) $errors[count($errors)] = 'Please enter your subject.'; 
+if (!$comment) $errors[count($errors)] = 'Please enter your message.';
 
 //if the errors array is empty, send the mail
 if (!$errors) {
@@ -29,7 +31,8 @@ if (!$errors) {
    //subject and the html message
    $subject = 'Message via Personal Website from ' . $name; 
    $message = 'Name: ' . $name . '<br/><br/>
-             Email: ' . $email . '<br/><br/>    
+             Email: ' . $email . '<br/><br/> 
+             Subject: ' . $subject . '<br/><br/>    
              Message: ' . nl2br($comment) . '<br/>';
 
    //send the mail
