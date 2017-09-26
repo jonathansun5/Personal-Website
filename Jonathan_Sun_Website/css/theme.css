@@ -1,3 +1,9 @@
+* {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
 /* Aries v1.0 - by WowThemes.net */
 body {
 	width:100%;
@@ -5,14 +11,14 @@ body {
 	font-family:Open Sans,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	color:#fff;
 	background-color:#000;
-	 font-weight:300;
+	font-weight:300;
 }
 html {
 	width:100%;
 	height:100%;
 }
 h1,h2,h3,h4,h5,h6 {
-	margin:0 0 35px;
+/*	margin:0 0 35px;*/
 	text-transform:uppercase;
 	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight:700;
@@ -40,6 +46,75 @@ a:hover,a:focus {
 	text-decoration:none;
 	color:inherit;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.jumbotron {
+  background-color: #159;
+  color: #fff;
+  text-align: center;
+}
+
+.jumbotron > h1 {
+  font-family: Constantia, 'Merriweather', serif;
+  font-variant: small-caps;
+}
+
+.tab-content {
+  background-color: #fff;
+  border: 1px #ddd solid;
+  border-top: 0;
+  padding: 30px;
+}
+
+.nav-tabs > li > a:hover {
+  background-color: #ddd;
+}
+
+.row-no {
+  margin: 10;
+}
+
+.face.img-responsive {
+  margin: 0 auto;
+  width: 200;
+  height: 200;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .light {
 	font-weight:400;
 }
