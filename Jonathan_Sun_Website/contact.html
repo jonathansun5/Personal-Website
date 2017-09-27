@@ -39,7 +39,7 @@
 	<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 		<ul class="nav navbar-nav">
 			<li>
-			<a href="index.html">Home</a>
+			<a href="https://www.ocf.berkeley.edu/~jonsun/">Home</a>
 			</li>
 			<li>
 			<a href="projects.html">Projects</a>
@@ -82,16 +82,12 @@
 					Your message has been sent. Thank you!
 				</div>
 			</div>
-			<form method="post" action="contact.php" id="contactform">
+			<form method="post" action="/contact.php" id="contactform">
 				<div class="form">
-					<input type="text" name="name" placeholder="Your Name *">
-					<?php echo "<p class='text-danger'>$errName</p>";?>
-					<input type="email" name="email" placeholder="Your E-mail Address *">
-					<?php echo "<p class='text-danger'>$errEmail</p>";?>
-					<input type="text" name="messagesubject" placeholder="Type your Subject *">
-					<?php echo "<p class='text-danger'>$errSubject</p>";?>
-					<textarea name="comment" rows="7" placeholder="Type your Message *"></textarea>
-					<?php echo "<p class='text-danger'>$errMessage</p>";?>
+					<input type="text" name="name" placeholder="Your Name *" />
+					<input type="text" name="email" placeholder="Your E-mail Address *" />
+					<input type="text" name="age" placeholder="Your message subject *" />
+					<textarea name="comment" rows="7" placeholder="Type your Message *" /></textarea>
 					<input type="submit" id="submit" class="clearfix btn" value="Send">
 				</div>
 			</form>
