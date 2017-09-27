@@ -5,7 +5,7 @@
 //POST - in case user does not support javascript, we'll use POST instead
 $name = ($_GET['name']) ? $_GET['name'] : $_POST['name'];
 $email = ($_GET['email']) ? $_GET['email'] : $_POST['email'];
-$subj1 = ($_GET['subj1']) ? $_GET['subj1'] : $_POST['subj1'];
+$subj1 = ($_GET['messagesubject']) ? $_GET['messagesubject'] : $_POST['messagesubject'];
 $comment = ($_GET['comment']) ? $_GET['comment'] : $_POST['comment'];
 $errors = array();
 
