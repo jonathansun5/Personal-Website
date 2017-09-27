@@ -85,9 +85,13 @@
 			<form method="post" action="contact.php" id="contactform">
 				<div class="form">
 					<input type="text" name="name" placeholder="Your Name *">
-					<input type="text" name="email" placeholder="Your E-mail Address *">
+					<?php echo "<p class='text-danger'>$errName</p>";?>
+					<input type="email" name="email" placeholder="Your E-mail Address *">
+					<?php echo "<p class='text-danger'>$errEmail</p>";?>
 					<input type="text" name="messagesubject" placeholder="Type your Subject *">
+					<?php echo "<p class='text-danger'>$errSubject</p>";?>
 					<textarea name="comment" rows="7" placeholder="Type your Message *"></textarea>
+					<?php echo "<p class='text-danger'>$errMessage</p>";?>
 					<input type="submit" id="submit" class="clearfix btn" value="Send">
 				</div>
 			</form>
