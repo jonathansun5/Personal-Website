@@ -39,7 +39,7 @@ if (!$errors) {
    $subject = 'Message via Personal Website from ' . $name; 
    $message = 'Name: ' . $name . '<br/><br/>
              Email: ' . $email . '<br/><br/> 
-             Subject: ' . $message . '<br/><br/>    
+             Subject: ' . $subject . '<br/><br/>    
              Message: ' . nl2br($comment) . '<br/>';
    //send the mail
    $result1 = sendmail($to1, $subject, $message, $from);
