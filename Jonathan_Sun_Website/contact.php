@@ -8,14 +8,14 @@ $age = "";
 $comment = "";
 $name = !empty($_POST['name']) ? $_POST['name'] : $_GET['name'];
 $email = !empty($_POST['email']) ? $_POST['email'] : $_GET['email'];
-$age = !empty($_POST['age']) ? $_POST['age'] : $_GET['age'];
+$subject = !empty($_POST['subject']) ? $_POST['subject'] : $_GET['subject'];
 $comment = !empty($_POST['comment']) ? $_POST['comment'] : $_GET['comment'];
-if (!empty($_POST ["age"])) {
-   if ($_POST ["age"] != "") {
+if (!empty($_POST ["subject"])) {
+   if ($_POST ["subject"] != "") {
       echo "Your form submission has an error.";
       exit;
    } else {
-      echo $_POST ["age"];
+      echo $_POST ["subject"];
    }
 } else {
    echo "its empty";
@@ -30,7 +30,7 @@ if ($_POST) $post=1;
 //Simple server side validation for POST data, of course, you should validate the email
 if (!$name) $errors[count($errors)] = 'Please enter your name.';
 if (!$email) $errors[count($errors)] = 'Please enter your email.'; 
-if (!$age) $errors[count($errors)] = 'Please enter your age subject.'; 
+if (!$age) $errors[count($errors)] = 'Please enter your subject.'; 
 if (!$comment) $errors[count($errors)] = 'Please enter your message.'; 
 //if the errors array is empty, send the mail
 if (!$errors) {

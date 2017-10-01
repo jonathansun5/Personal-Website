@@ -8,6 +8,7 @@ jQuery(document).ready(function ($) {
 		var name = $('input[name=name]');
 		var email = $('input[name=email]');
 		var regx = /^([a-z0-9_\-\.])+\@([a-z0-9_\-\.])+\.([a-z]{2,4})$/i;
+		var subject = $('input[name=subject]');
 		var comment = $('textarea[name=comment]');
 		var returnError = false;
 		
@@ -29,7 +30,11 @@ jQuery(document).ready(function ($) {
           returnError = true;
 		} else email.removeClass('error');
 		
-		
+		if (subject.val()=='') {
+			subject.addClass('error');
+			returnError = true;
+		} else subject.removeClass('error');
+
 		if (comment.val()=='') {
 			comment.addClass('error');
 			returnError = true;
@@ -42,7 +47,7 @@ jQuery(document).ready(function ($) {
 		
 		//organize the data
 		
-		var data = 'name=' + name.val() + '&email=' + email.val() + '&comment='  + encodeURIComponent(comment.val());
+		var data = 'name=' + name.val() + '&email=' + email.val() + '&subject='  + encodeURIComponent(subject.val()) + '&comment='  + encodeURIComponent(comment.val());
 
 		//disabled all the text fields
 		$('.text').attr('disabled','true');
