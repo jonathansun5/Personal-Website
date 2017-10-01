@@ -8,16 +8,8 @@ $subject = "";
 $comment = "";
 $name = !empty($_POST['name']) ? $_POST['name'] : $_GET['name'];
 $email = !empty($_POST['email']) ? $_POST['email'] : $_GET['email'];
-$subject = !empty($_POST['subject']) ? $_POST['subject'] : $_GET['subject'];
+$messagesubject = !empty($_POST['messagesubject']) ? $_POST['messagesubject'] : $_GET['messagesubject'];
 $comment = !empty($_POST['comment']) ? $_POST['comment'] : $_GET['comment'];
-if (!empty($_POST ["subject"])) {
-   if ($_POST ["subject"] != "") {
-      echo "Your form submission has an error.";
-      exit;
-   } else {
-      echo $_POST ["subject"];
-   }
-}
 
 $errors = array();
 //flag to indicate which method it uses. If POST set it to 1
@@ -39,7 +31,7 @@ if (!$errors) {
    $subject = 'Message via Personal Website from ' . $name; 
    $message = 'Name: ' . $name . '<br/><br/>
              Email: ' . $email . '<br/><br/> 
-             Subject: ' . $subject . '<br/><br/>    
+             Subject: ' . $messagesubject . '<br/><br/>    
              Message: ' . nl2br($comment) . '<br/>';
    //send the mail
    $result1 = sendmail($to1, $subject, $message, $from);
