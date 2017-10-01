@@ -4,7 +4,7 @@
 //POST - in case user does not support javascript, we'll use POST instead
 $name = "";
 $email = "";
-$age = "";
+$subject = "";
 $comment = "";
 $name = !empty($_POST['name']) ? $_POST['name'] : $_GET['name'];
 $email = !empty($_POST['email']) ? $_POST['email'] : $_GET['email'];
@@ -17,20 +17,15 @@ if (!empty($_POST ["subject"])) {
    } else {
       echo $_POST ["subject"];
    }
-} else {
-   echo "its empty";
 }
-// $name = isset($_GET['name']) ? $_GET['name'] : $_POST['name'];
-// $email = isset($_GET['email']) ?$_GET['email'] : $_POST['email'];
-// $message = isset($_GET['message']) ?$_GET['message'] : $_POST['message'];
-// $comment = isset($_GET['comment']) ?$_GET['comment'] : $_POST['comment'];
+
 $errors = array();
 //flag to indicate which method it uses. If POST set it to 1
 if ($_POST) $post=1;
 //Simple server side validation for POST data, of course, you should validate the email
 if (!$name) $errors[count($errors)] = 'Please enter your name.';
 if (!$email) $errors[count($errors)] = 'Please enter your email.'; 
-if (!$age) $errors[count($errors)] = 'Please enter your subject.'; 
+if (!$subject) $errors[count($errors)] = 'Please enter your subject.'; 
 if (!$comment) $errors[count($errors)] = 'Please enter your message.'; 
 //if the errors array is empty, send the mail
 if (!$errors) {
